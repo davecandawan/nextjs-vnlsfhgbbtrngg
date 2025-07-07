@@ -50,7 +50,7 @@ const Content: React.FC = () => {
               <div className="relative">
                 <div className="relative w-14 h-14 sm:w-16 sm:h-16">
                   <Image
-                    src="/contentimages/testimonialLSSHolsterMobilesize.avif"
+                    src="/contentimages/testimonialLSSHolsterMobilesize.webp"
                     alt="Don T."
                     fill
                     className="rounded-full object-cover"
