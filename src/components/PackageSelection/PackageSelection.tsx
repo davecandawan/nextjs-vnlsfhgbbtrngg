@@ -1,7 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 const PackageSelection: React.FC = () => {
+  const searchParams = useSearchParams();
+  
+  // Get all current URL parameters
+  const getCheckoutUrl = (baseUrl: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    const queryString = params.toString();
+    return `${baseUrl}${queryString ? `?${queryString}` : ''}`;
+  };
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
@@ -33,7 +42,7 @@ const PackageSelection: React.FC = () => {
             </div>
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsfhgbbtrngg/starter-checkout"
+                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/starter-checkout")}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -110,7 +119,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsfhgbbtrngg/advanced-checkout"
+                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/advanced-checkout")}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -182,7 +191,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsfhgbbtrngg/enhanced-checkout"
+                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/enhanced-checkout")}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
