@@ -10,7 +10,7 @@ const Slideshow: React.FC = () => {
 
   const slides = [
     {
-      image: '/contentimages/LSETHeroDesktop.webp',
+      image: '/contentimages/VNSH_LaserStrike_HeroDesktop.webp',
       alt: 'Hero slide',
     },
     {
@@ -18,12 +18,8 @@ const Slideshow: React.FC = () => {
       alt: 'Laser Strike 5',
     },
     {
-      image: '/contentimages/LSETImage3Desktop.webp',
+      image: '/contentimages/VNSH_LaserStrike_4Desktop.webp',
       alt: 'Image 3',
-    },
-    {
-      image: '/contentimages/LSETImage4Desktop.webp',
-      alt: 'Image 4',
     },
     {
       image: '/contentimages/VNSH_LaserStrike_3Desktop.webp',
@@ -34,11 +30,15 @@ const Slideshow: React.FC = () => {
       alt: 'Laser Strike 2',
     },
     {
-      image: '/contentimages/LSETImage6Desktop.webp',
+      image: '/contentimages/VNSH_LaserStrike_1Desktop.webp',
+      alt: 'Laser Strike 2',
+    },
+    {
+      image: '/contentimages/HolsterHero2.webp',
       alt: 'Image 6',
     },
     {
-      image: '/contentimages/LSETImage7Desktop.webp',
+      image: '/contentimages/Desktop3.webp',
       alt: 'Image 7',
     },
   ];

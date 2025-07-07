@@ -9,7 +9,7 @@ const PackageSelection: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-3 lg:order-1">
           <div className="relative w-full h-auto overflow-hidden bg-white aspect-square">
             <Image
-              src="/contentimages/LSETStarterMobile2.webp"
+              src="/contentimages/StarterMobileU.webp"
               alt="Starter Package"
               fill
               className="object-contain object-top"
@@ -18,15 +18,22 @@ const PackageSelection: React.FC = () => {
           </div>
           <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-white">
             <div className="flex justify-center items-center gap-2">
-              <span className="text-5xl font-bold text-black">$139</span>
+              <span className="text-5xl font-bold text-black">$99</span>
               <span className="text-[#ff0000] text-lg font-bold">+ S&H</span>
             </div>
-            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $60</div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $159</div>
             <div className="text-black text-center mb-4 text-xl">(Pick Your Caliber)</div>
-
+            <div className="mb-1 -ml-6">
+              <ul className="list-none p-0 m-0">
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">FREE VNSH Holster - Black</span>
+                </li>
+              </ul>
+            </div>
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsegbbgg/starter-checkout"
+                href="https://secure.vnsh.com/vnlsfhgbbtrngg/starter-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -63,7 +70,7 @@ const PackageSelection: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
           <div className="relative w-full h-96 overflow-hidden bg-[#ededed]">
             <Image
-              src="/contentimages/LSETUltimateMobile2.webp"
+              src="/contentimages/AdvancedMobileU2.webp"
               alt="Ultimate Package"
               fill
               className="object-contain -mt-[15px] md:-mt-[15px]"
@@ -75,8 +82,10 @@ const PackageSelection: React.FC = () => {
               <span className="text-5xl font-bold text-black">$199</span>
               <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
             </div>
-            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $290</div>
-            <div className="mb-4 -ml-6">
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">
+              You Saved $416.80
+            </div>
+            <div className="mb-1 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
@@ -86,18 +95,22 @@ const PackageSelection: React.FC = () => {
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">FREE VNSH Holster - Camo</span>
+                </li>
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
                   <span className="text-base">FREE - 2 MagMates</span>
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">3 Extra "Virtual Steel" Targets</span>
+                  <span className="text-base">FREE VNSH Holster - Black</span>
                 </li>
               </ul>
             </div>
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsegbbgg/ultimate-checkout"
+                href="https://secure.vnsh.com/vnlsfhgbbtrngg/ultimate-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -134,7 +147,7 @@ const PackageSelection: React.FC = () => {
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
           <div className="relative w-full h-96 overflow-hidden bg-white">
             <Image
-              src="/contentimages/LSETEnhancedMobile2.webp"
+              src="/contentimages/EnhancedMobileU2.webp"
               alt="Enhanced Package"
               fill
               className="object-contain -mt-4 md:-mt-4"
@@ -143,16 +156,18 @@ const PackageSelection: React.FC = () => {
           </div>
           <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-white">
             <div className="flex justify-center items-center gap-2">
-              <span className="text-5xl font-bold text-black">$159</span>
+              <span className="text-5xl font-bold text-black">$149</span>
               <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
             </div>
-            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $110</div>
-            <div className="text-black text-center mb-4 text-xl">(Pick Your Calibers)</div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">
+              You Saved $207.89
+            </div>
+            <div className="text-black text-center mb-4 text-xl">(Pick Your Caliber)</div>
             <div className="mb-4 -ml-6">
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">FREE MagMate</span>
+                  <span className="text-base">FREE 1 MagMate</span>
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
@@ -160,14 +175,14 @@ const PackageSelection: React.FC = () => {
                 </li>
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">Extra "Virtual Steel" Target</span>
+                  <span className="text-base">FREE VNSH Holster - Black</span>
                 </li>
               </ul>
             </div>
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsegbbgg/advance-checkout"
+                href="https://secure.vnsh.com/vnlsfhgbbtrngg/advance-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"

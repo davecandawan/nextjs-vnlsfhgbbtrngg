@@ -5,6 +5,27 @@ const Reviews = () => {
   const reviews = [
     {
       id: 1,
+      name: 'Fred H.',
+      stars: '★★★★★',
+      date: 'I really like it',
+      text: '"I really like it and how it fits. I gave my other VNSH holster to a Vietnam Vet friend of mine and he loves it too."',
+      textClass: 'pl-2',
+      image: '/contentimages/review7mobile.jpg',
+      width: 120,
+      height: 239,
+    },
+    {
+      id: 2,
+      name: 'Allen C.',
+      stars: '★★★★★',
+      date: "I've purchased a lot of holsters",
+      text: "\"I've purchased a lot of holsters, this one is by far the best one I've purchased and will stick to. I've recommended it to my coworkers.\"",
+      image: '/contentimages/review5mobile.webp',
+      width: 120,
+      height: 142,
+    },
+    {
+      id: 3,
       name: 'Brandon C.',
       stars: '★★★★★',
       date: 'Absolutely enjoying this system!',
@@ -15,7 +36,7 @@ const Reviews = () => {
       height: 239,
     },
     {
-      id: 2,
+      id: 4,
       name: 'Alicia B.',
       stars: '★★★★★',
       date: 'Equipment is perfect.',
@@ -25,17 +46,27 @@ const Reviews = () => {
       height: 142,
     },
     {
-      id: 3,
-      name: 'Kolin L.',
+      id: 5,
+      name: 'Darin P.',
       stars: '★★★★★',
-      date: 'The Laser Strike System',
-      text: '”The Laser Strike System not only saves me money on ammunition, the convenience is fantastic. I can spend short sessions becoming a better shot, in between daily tasks. The feedback is invaluable and I look forward to getting to the range after each use.”',
-      image: '/contentimages/testimonial5.webp',
+      date: 'Most comfortable off duty holster',
+      text: '"Most comfortable off duty holster I’ve had. Finally, dumped the fanny pack for carry."',
+      image: '/contentimages/review6mobile.jpg',
       width: 120,
       height: 142,
     },
     {
-      id: 4,
+      id: 6,
+      name: 'Aaron M.',
+      stars: '★★★★★',
+      date: 'One of the best I’ve ever owned',
+      text: "\"This holster has to be one of the best holsters I've ever owned. This thing is extremely versatile in terms how and where you can carry. Certain clothing don't allow me to carry at all but with this holster it's no longer a problem. They had an option for a larger sized person and I didn't believe i...\"",
+      image: '/contentimages/reviewmobile.webp',
+      width: 120,
+      height: 119,
+    },
+    {
+      id: 7,
       name: 'Kevin C.',
       stars: '★★★★★',
       date: 'This is a great product!',
@@ -45,7 +76,7 @@ const Reviews = () => {
       height: 119,
     },
     {
-      id: 5,
+      id: 8,
       name: 'Anthony L.',
       stars: '★★★★★',
       date: 'I love this system. Told my brother to get one too.',
@@ -55,20 +86,10 @@ const Reviews = () => {
       width: 120,
       height: 239,
     },
-    {
-      id: 6,
-      name: 'Sam C.',
-      stars: '★★★★★',
-      date: 'A great way to practice.',
-      text: "”I like that I can use it anywhere. I like everything about it, the sound the lights, it's great fun.”",
-      image: null,
-      width: 0,
-      height: 0,
-    },
   ];
 
-  const firstColumn = reviews.slice(0, 3);
-  const secondColumn = reviews.slice(3);
+  const firstColumn = reviews.slice(0, 4);
+  const secondColumn = reviews.slice(4);
 
   return (
     <div className="mt-20 mb-12 px-4 max-w-7xl mx-auto">

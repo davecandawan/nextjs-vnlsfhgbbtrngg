@@ -7,26 +7,13 @@ import Faqs from '../Faqs/Faqs';
 import StickyBanner from '../StickyBanner/StickyBanner';
 import Reviews from '../Reviews/Reviews';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
-import { primaryFont, interRegular } from '@/app/fonts';
 
 const Slideshow = dynamic(() => import('../Slideshow/Slideshow'), {
   ssr: false,
   loading: () => <div className="h-64 bg-gray-200 animate-pulse rounded-lg"></div>,
 });
 
-interface ContentProps {
-  buttonText?: string;
-}
-
-const Content: React.FC<ContentProps> = ({
-  buttonText = 'Give Me My Enhanced Laser Strike System + Virtual Steel Target!',
-}) => {
-  const scrollToPackages = useCallback(() => {
-    const packagesSection = document.getElementById('package-selection');
-    if (packagesSection) {
-      packagesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
+const Content: React.FC = () => {
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
       <div className="w-full bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
@@ -41,8 +28,8 @@ const Content: React.FC<ContentProps> = ({
               <AddToCartButton />
             </div>
           </div>
-          <div className="max-w-4xl mx-auto text-center mb-8">
-            <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-1">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-10">
               <div className="flex-shrink-0">
                 <Image
                   src="/contentimages/reviewstars.webp"
@@ -53,17 +40,7 @@ const Content: React.FC<ContentProps> = ({
                 />
               </div>
               <span className="font-semibold text-lg sm:text-2xl whitespace-nowrap">
-                116 Reviews
-              </span>
-            </div>
-            <div className="bg-[#f7f2f2] py-2 sm:py-2 sm:px-6 inline-block text-[13px] sm:text-2xl whitespace-nowrap overflow-x-auto w-full sm:w-auto">
-              <span className="inline-flex items-center">
-                <span className="mr-1">✨</span>
-                <strong>
-                  <span className="hidden sm:inline">Highly rated by customers for: </span>
-                  <span className="sm:hidden">Highly rated by customers for: </span>
-                  <u>ease of use</u>, <u>quality</u>
-                </strong>
+                112 Reviews
               </span>
             </div>
           </div>
@@ -81,7 +58,7 @@ const Content: React.FC<ContentProps> = ({
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#2f78c9] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-                  ✓
+                  <span className="font-extrabold text-[14px]">✓</span>
                 </div>
               </div>
               <div className="text-center sm:text-left min-w-[120px]">
@@ -243,13 +220,14 @@ const Content: React.FC<ContentProps> = ({
           <header className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:pt-4">
             <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
               <div className="font-jawbreak uppercase">
-                Use IT APP-FREE With Our Digital Steel Target
+                <span className="text-[#ff0000]">Limited Free Bonus Gift (Worth $80)</span> Get Our
+                "World's Comfiest" Holster Free!
               </div>
             </h1>
           </header>
-          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0">
+          <div className="w-full md:w-[85%] mx-auto max-w-[1120px] py-4 px-0 md:px-0">
             <Image
-              src="/contentimages/DigitalTargetDesktop2.webp"
+              src="/contentimages/BlockImage5Desktop.webp"
               alt="Laser Strike System"
               className="w-full h-auto"
               width={1120}
@@ -257,27 +235,54 @@ const Content: React.FC<ContentProps> = ({
               priority
             />
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 font-inter">
             <p className="text-lg leading-relaxed mb-4">
-              By far the coolest thing about the new Enhanced Laser Strike System is the fact it
-              comes with a “digital steel” target – which works seamlessly with your laser cartridge
-              insert.
+              For a short time, we’re sending out our flagship product – the VNSH Holster –{' '}
+              <span className="font-bold">
+                100% FREE with every Laser Strike order (from this page ONLY!)
+              </span>
             </p>
             <p className="text-lg leading-relaxed mb-4">
-              Just rack the insert, fire at the digital steel, and grin ear-to-ear every time you
-              hear it PING! 🤠
+              Our mission is simple… to help Americans defend themselves as{' '}
+              <span className="font-bold italic">easily and effectively</span> as possible
+              everywhere they go.
             </p>
             <p className="text-lg leading-relaxed mb-4">
-              Effortlessly shoot over and over and the target will reset and track each shot.
+              That’s why we set out to create the most comfortable holster on the planet… which has
+              sold over 255,234 units since we launched late last year.
             </p>
             <p className="text-lg leading-relaxed mb-4">
-              Portable, rechargeable and super easy to use, it makes training extra fun.
+              📈 <span className="font-bold">America’s Fastest-Growing Holster Company</span>: More
+              than 250,000 sold since Jan 1, 2023. All because of exceptional comfort, safety and
+              our commitment to customer satisfaction.
+            </p>
+            <p className="text-lg leading-relaxed mb-4">
+              🏃‍♂️😌 <span className="font-bold">Made For Comfort and Durability</span>: We made the
+              VNSH holster to be comfortable first. We used top-shelf materials from premium
+              athletic wear, along with ultra soft and supportive “yoga pant” material, supple
+              microfiber and 1000D Denier Nylon.
+            </p>
+            <p className="text-lg leading-relaxed mb-4">
+              🔄{' '}
+              <span className="font-bold">Works With Any Clothes + Multiple Carry Positions</span>:
+              Our belt (available in 48" or 68" works with any clothes and gets you carrying in
+              multiple positions.
+            </p>
+            <p className="text-lg leading-relaxed mb-4">
+              🛡️ <span className="font-bold">Safe and Secure</span>: Trigger protection guaranteed
+              thanks to thermo-molded plastic trigger guard and our magnetic retention strap keeps
+              your firearms locked down.
+            </p>
+            <p className="text-lg leading-relaxed mb-4">
+              🔄 <span className="font-bold">Works with MOST Pistols</span>: Our unique holster
+              works with 99% of pistols and many small-frame revolvers so you can use 1 holster for
+              all your guns* (will not work with most weapon lights).
             </p>
           </div>
           <div className="w-full md:w-[85%] mx-auto max-w-[1120px] px-0 md:px-0 md:py-5">
             <Image
-              src="/contentimages/DigitalTarget2Desktop.webp"
-              alt="Laser Strike System"
+              src="/contentimages/VNSH-BlackHolster-BlockImages-V2-Desktop.webp"
+              alt="VNSH Black Holster"
               className="w-full h-auto"
               width={1120}
               height={600}
@@ -302,29 +307,30 @@ const Content: React.FC<ContentProps> = ({
                 priority
               />
             </div>
-            <p>Love everything about your order, or we’ll refund you every penny.</p>
-            <p>It’s that simple.</p>
-            <p>
-              If you aren’t totally thrilled, all you have to do is contact our US-Based Support
-              Team within 60 days to get a full refund.
-            </p>
-            <p className="font-bold">
-              Plus, we also give you a 2-year workmanship guarantee as well!
-            </p>
-            <p>
-              We know you’ll love your VNSH gear, which is why we’re happy to extend you these
-              iron-clad guarantees.
-            </p>
-            <p>
-              So if you want to get an awesome price on the{' '}
-              <span className="font-bold italic">
-                fastest, easiest way to become a dead accurate shooter…
-              </span>
-            </p>
-            <p id="package-selection" className="text-lg md:text-xl font-medium mb-8">
-              Then you owe it to yourself to grab this deal now!
-            </p>
-
+            <div className="font-inter">
+              <p>Love everything about your order, or we’ll refund you every penny.</p>
+              <p>It’s that simple.</p>
+              <p>
+                If you aren’t totally thrilled, all you have to do is contact our US-Based Support
+                Team within 60 days to get a full refund.
+              </p>
+              <p className="font-bold">
+                Plus, we also give you a 2-year workmanship guarantee as well!
+              </p>
+              <p>
+                We know you’ll love your VNSH gear, which is why we’re happy to extend you these
+                iron-clad guarantees.
+              </p>
+              <p>
+                So if you want to get an awesome price on the{' '}
+                <span className="font-bold italic">
+                  fastest, easiest way to become a dead accurate shooter…
+                </span>
+              </p>
+              <p id="package-selection" className="text-lg md:text-xl font-medium mb-8">
+                Then you owe it to yourself to grab this deal now!
+              </p>
+            </div>
             {/* Reviews Component */}
             <div className="mb-12">
               <Reviews />
@@ -336,8 +342,10 @@ const Content: React.FC<ContentProps> = ({
             </div>
 
             <header id="faqs" className="text-center pt-2 pb-1 -mb-6 md:mb-0 md:py-4">
-              <h1 className="text-3xl sm:text-3xl md:text-[46px] font-medium leading-[1] md:leading-tight mb-0 px-2">
-                <div className="font-jawbreak uppercase">Frequently Asked Questions</div>
+              <h1 className="text-3xl sm:text-3xl md:text-[46px] leading-[1] md:leading-tight mb-0 px-2">
+                <div className="font-jawbreak uppercase font-bold [text-shadow:0.5px_0_0_black]">
+                  Frequently Asked Questions
+                </div>
               </h1>
             </header>
           </div>

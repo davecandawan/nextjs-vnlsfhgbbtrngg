@@ -17,11 +17,11 @@ const AddToCartButton = () => {
       </div>
       <div className="w-1/2 sm:w-[62%] text-center">
         <span className="text-xl sm:text-3xl font-medium tracking-wide font-jawbreak leading-tight sm:leading-[1.2] block">
-          FULL SYSTEM + VIRTUAL STEEL TARGET
+          FULL SYSTEM + FREE HOLSTER
         </span>
         <div className="mt-1 sm:mt-2">
-          <span className="pr-4 font-medium text-xl sm:text-3xl">$139.00</span>
-          <span className="text-[#ff0000] line-through text-xl sm:text-3xl">$199.00</span>
+          <span className="pr-4 font-medium text-xl sm:text-3xl">$99.00</span>
+          <span className="text-[#ff0000] line-through text-xl sm:text-3xl">$179.00</span>
         </div>
       </div>
     </div>
