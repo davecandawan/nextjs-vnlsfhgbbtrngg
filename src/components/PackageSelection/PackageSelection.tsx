@@ -110,7 +110,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsfhgbbtrngg/ultimate-checkout"
+                href="https://secure.vnsh.com/vnlsfhgbbtrngg/advanced-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -182,7 +182,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href="https://secure.vnsh.com/vnlsfhgbbtrngg/advance-checkout"
+                href="https://secure.vnsh.com/vnlsfhgbbtrngg/enhanced-checkout"
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"

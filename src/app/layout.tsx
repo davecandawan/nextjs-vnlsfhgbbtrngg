@@ -4,29 +4,29 @@ import '@/styles/globals.css';
 import '@/styles/fonts.css';
 
 export const metadata: Metadata = {
-  title: 'VNSH Enhanced Laser Strike + Virtual Steel Target!',
-  description: 'Enhanced Laser Strike + Virtual Steel Target!',
+  title: 'VNSH Laser Strike System + FREE Holster!',
+  description: 'Laser Strike System + FREE Holster!',
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'VNSH Enhanced Laser Strike + Virtual Steel Target!',
-    description: 'Enhanced Laser Strike + Virtual Steel Target!',
+    title: 'VNSH Laser Strike System + FREE Holster!',
+    description: 'Laser Strike System + FREE Holster!',
     type: 'website',
     images: [
       {
         url: '/favicon.png',
         width: 512,
         height: 512,
-        alt: 'VNSH Enhanced Laser Strike + Virtual Steel Target!',
+        alt: 'VNSH Laser Strike System + FREE Holster!',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VNSH Enhanced Laser Strike + Virtual Steel Target!',
-    description: 'Enhanced Laser Strike + Virtual Steel Target!',
+    title: 'VNSH Laser Strike System + FREE Holster!',
+    description: 'Laser Strike System + FREE Holster!',
     images: ['/favicon.png'],
   },
 };
@@ -43,9 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-sans">
-        {children}
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
