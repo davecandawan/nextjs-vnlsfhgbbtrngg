@@ -1,0 +1,7 @@
+.faqQuestion {
+  font-family: 'StratumNo1-Black', Arial, sans-serif;
+  src: url('/fonts/stratumno1-black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

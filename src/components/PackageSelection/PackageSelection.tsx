@@ -1,0 +1,207 @@
+import React from 'react';
+import Image from 'next/image';
+
+const PackageSelection: React.FC = () => {
+  return (
+    <div className="w-full max-w-7xl mx-auto px-4 py-8">
+      <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
+        {/* Starter Package */}
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-3 lg:order-1">
+          <div className="relative w-full h-auto overflow-hidden bg-white aspect-square">
+            <Image
+              src="/contentimages/LSETStarterMobile2.webp"
+              alt="Starter Package"
+              fill
+              className="object-contain object-top"
+              priority
+            />
+          </div>
+          <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-white">
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-5xl font-bold text-black">$139</span>
+              <span className="text-[#ff0000] text-lg font-bold">+ S&H</span>
+            </div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $60</div>
+            <div className="text-black text-center mb-4 text-xl">(Pick Your Caliber)</div>
+
+            <div className="mt-auto">
+              <a
+                href="https://secure.vnsh.com/vnlsegbbgg/starter-checkout"
+                target="_self"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <div className="relative w-full h-16 group">
+                  <div className="relative w-full h-full transition-all duration-300 group-hover:scale-105 group-hover:opacity-90">
+                    <Image
+                      src="/contentimages/VNSH_add_to_cart_electric_green.avif"
+                      alt="Add to Cart"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100%, 33%"
+                    />
+                  </div>
+                </div>
+              </a>
+
+              <div className="mt-4 flex justify-center">
+                <div className="relative w-3/5 h-10">
+                  <Image
+                    src="/contentimages/BlackBundleCardImage.avif"
+                    alt="Payment Methods"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100%, 33%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Ultimate Package */}
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
+          <div className="relative w-full h-96 overflow-hidden bg-[#ededed]">
+            <Image
+              src="/contentimages/LSETUltimateMobile2.webp"
+              alt="Ultimate Package"
+              fill
+              className="object-contain -mt-[15px] md:-mt-[15px]"
+              priority
+            />
+          </div>
+          <div className="p-4 flex-grow flex flex-col bg-[#ededed]">
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-5xl font-bold text-black">$199</span>
+              <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
+            </div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $290</div>
+            <div className="mb-4 -ml-6">
+              <ul className="list-none p-0 m-0">
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">
+                    All Calibers <span className="text-sm">(9mm, .380, .40 & .45)</span>
+                  </span>
+                </li>
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">FREE - 2 MagMates</span>
+                </li>
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">3 Extra "Virtual Steel" Targets</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-auto">
+              <a
+                href="https://secure.vnsh.com/vnlsegbbgg/ultimate-checkout"
+                target="_self"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <div className="relative w-full h-16 group">
+                  <div className="relative w-full h-full transition-all duration-300 group-hover:scale-105 group-hover:opacity-90">
+                    <Image
+                      src="/contentimages/VNSH_add_to_cart_electric_green.avif"
+                      alt="Add to Cart"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100%, 33%"
+                    />
+                  </div>
+                </div>
+              </a>
+
+              <div className="mt-4 flex justify-center">
+                <div className="relative w-3/5 h-10">
+                  <Image
+                    src="/contentimages/BlackBundleCardImage.avif"
+                    alt="Payment Methods"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100%, 33%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Enhanced Package */}
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
+          <div className="relative w-full h-96 overflow-hidden bg-white">
+            <Image
+              src="/contentimages/LSETEnhancedMobile2.webp"
+              alt="Enhanced Package"
+              fill
+              className="object-contain -mt-4 md:-mt-4"
+              priority
+            />
+          </div>
+          <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-white">
+            <div className="flex justify-center items-center gap-2">
+              <span className="text-5xl font-bold text-black">$159</span>
+              <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
+            </div>
+            <div className="text-black font-bold text-xl mb-2 text-center pt-2">You Saved $110</div>
+            <div className="text-black text-center mb-4 text-xl">(Pick Your Calibers)</div>
+            <div className="mb-4 -ml-6">
+              <ul className="list-none p-0 m-0">
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">FREE MagMate</span>
+                </li>
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">Extra Laser Cartridge</span>
+                </li>
+                <li className="flex items-start bg-black text-white px-3 py-0.5 rounded">
+                  <span className="text-white mr-2 text-base">+</span>
+                  <span className="text-base">Extra "Virtual Steel" Target</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-auto">
+              <a
+                href="https://secure.vnsh.com/vnlsegbbgg/advance-checkout"
+                target="_self"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                <div className="relative w-full h-16 group">
+                  <div className="relative w-full h-full transition-all duration-300 group-hover:scale-105 group-hover:opacity-90">
+                    <Image
+                      src="/contentimages/VNSH_add_to_cart_electric_green.avif"
+                      alt="Add to Cart"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100%, 33%"
+                    />
+                  </div>
+                </div>
+              </a>
+
+              <div className="mt-4 flex justify-center">
+                <div className="relative w-3/5 h-10">
+                  <Image
+                    src="/contentimages/BlackBundleCardImage.avif"
+                    alt="Payment Methods"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100%, 33%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PackageSelection;
