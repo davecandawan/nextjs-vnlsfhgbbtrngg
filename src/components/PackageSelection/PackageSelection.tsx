@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
 const PackageSelection: React.FC = () => {
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const productCards = document.querySelectorAll<HTMLElement>('.product-card');
+    console.log('Product cards found:', productCards.length);
+    console.log('User Agent:', navigator.userAgent);
+
+    // Ensure we have at least 3 product cards
+    if (productCards.length >= 3) {
+      // Check if the visitor is a Googlebot
+      const isGooglebot = /Googlebot/i.test(navigator.userAgent);
+      console.log('Is Googlebot?', isGooglebot);
+      
+      if (isGooglebot) {
+        // If it's Googlebot, keep the 2nd and 3rd product cards hidden
+        console.log('Hiding cards 2 and 3');
+        productCards[1].style.display = 'none';
+        productCards[2].style.display = 'none';
+      } else {
+        // Otherwise, display them
+        console.log('Showing all cards');
+        productCards[1].style.display = 'flex';
+        productCards[2].style.display = 'flex';
+      }
+    }
+  }, []);
   
   // Get all current URL parameters
   const getCheckoutUrl = (baseUrl: string) => {
@@ -15,7 +40,7 @@ const PackageSelection: React.FC = () => {
     <div className="w-full max-w-7xl mx-auto px-4 py-8">
       <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
         {/* Starter Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-3 lg:order-1">
+        <div className="product-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-3 lg:order-1">
           <div className="relative w-full h-auto overflow-hidden bg-white aspect-square">
             <Image
               src="/contentimages/StarterMobileU.webp"
@@ -76,7 +101,7 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Ultimate Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
+        <div className="product-card bg-white rounded-2xl shadow-md overflow-hidden border-[3px] border-[#a3a0a0] w-[320px] flex flex-col order-1 lg:order-2">
           <div className="relative w-full h-96 overflow-hidden bg-[#ededed]">
             <Image
               src="/contentimages/AdvancedMobileU2.webp"
@@ -153,7 +178,7 @@ const PackageSelection: React.FC = () => {
         </div>
 
         {/* Enhanced Package */}
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
+        <div className="product-card bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 w-[320px] flex flex-col order-2">
           <div className="relative w-full h-96 overflow-hidden bg-white">
             <Image
               src="/contentimages/EnhancedMobileU2.webp"

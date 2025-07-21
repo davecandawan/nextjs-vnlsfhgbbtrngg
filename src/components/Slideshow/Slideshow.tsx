@@ -110,14 +110,14 @@ const Slideshow: React.FC = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 sm:p-2 rounded-full shadow-md hover:shadow-lg transition-all backdrop-blur-sm"
+          className="text-xl sm:text-2xl absolute left-0 sm:left-0 top-1/2 transform -translate-y-1/2 bg-transparent hover:bg-[#000000CC] text-white p-2 sm:p-3 rounded-none transition-all backdrop-blur-sm"
           aria-label="Previous slide"
         >
           ❮
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-black p-1.5 sm:p-2 rounded-full shadow-md hover:shadow-lg transition-all backdrop-blur-sm"
+          className="text-xl sm:text-2xl absolute right-0 sm:right-0 top-1/2 transform -translate-y-1/2 bg-transparent hover:bg-[#000000CC] text-white p-2 sm:p-3 rounded-none transition-all backdrop-blur-sm"
           aria-label="Next slide"
         >
           ❯
@@ -130,9 +130,10 @@ const Slideshow: React.FC = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`flex-shrink-0 w-8 h-6 sm:w-12 sm:h-9 md:w-16 md:h-12 overflow-hidden transition-all bg-transparent p-0 border-0 ${
+            className={`flex-shrink-0 w-8 h-6 sm:w-10 sm:h-7 md:w-14 md:h-10 overflow-hidden transition-all bg-transparent p-0 m-0 border-0 ${
               currentSlide === index ? 'ring-1 ring-gray-300' : 'opacity-70 hover:opacity-100'
             }`}
+            style={{ borderRadius: '0' }}
             aria-label={`Go to slide ${index + 1}`}
           >
             <img
