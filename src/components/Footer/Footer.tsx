@@ -1,6 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import FooterModal from './FooterModal';
+
+// Add slide-top animation
+const modalStyle = `
+  @keyframes slideInTop {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideOutTop {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100%); opacity: 0; }
+  }
+  
+  .modal-enter {
+    animation: slideInTop 0.3s ease-out forwards;
+  }
+  
+  .modal-exit {
+    animation: slideOutTop 0.3s ease-in forwards;
+  }
+`;
 
 interface FooterColumnProps {
   imgUrl: string;
@@ -74,17 +95,33 @@ const FooterLinks: React.FC<{ loadInfo: (id: string) => void }> = ({ loadInfo })
 const Footer: React.FC = () => {
   const [modalId, setModalId] = useState<string>('');
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Add the style element to the document head
+    const styleElement = document.createElement('style');
+    styleElement.textContent = modalStyle;
+    document.head.appendChild(styleElement);
+    
+    return () => {
+      // Clean up the style element when component unmounts
+      document.head.removeChild(styleElement);
+    };
+  }, []);
 
   const loadInfo = (id: string) => {
     setModalId(id);
     setShowModal(true);
-    document.body.style.overflow = 'hidden';
+    setIsAnimating(true);
   };
 
   const closeModal = () => {
-    setShowModal(false);
-    setModalId('');
-    document.body.style.overflow = 'auto';
+    setIsAnimating(false);
+    // Wait for the exit animation to complete before hiding the modal
+    setTimeout(() => {
+      setShowModal(false);
+      setModalId('');
+    }, 300); // Match this with the animation duration
   };
 
   return (
@@ -99,9 +136,11 @@ const Footer: React.FC = () => {
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 p-4 pt-20" onClick={closeModal}>
+        <div className="fixed inset-0 bg-black bg-opacity-0 z-50 p-4 pt-20 transition-all duration-300 ease-in-out" 
+          style={{ backgroundColor: showModal ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)' }}
+          onClick={closeModal}>
           <div
-            className="bg-white rounded-lg max-w-6xl w-full max-h-[80vh] overflow-y-auto relative mx-auto"
+            className={`bg-white rounded-lg max-w-6xl w-full max-h-[100vh] overflow-y-auto relative mx-auto ${isAnimating ? 'modal-enter' : 'modal-exit'}`}
             onClick={e => e.stopPropagation()}
           >
             <button
