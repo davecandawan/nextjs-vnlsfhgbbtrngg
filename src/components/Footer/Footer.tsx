@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
     const styleElement = document.createElement('style');
     styleElement.textContent = modalStyle;
     document.head.appendChild(styleElement);
-    
+
     return () => {
       // Clean up the style element when component unmounts
       document.head.removeChild(styleElement);
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
     <footer className="w-full mt-2 bg-[#242833] pb-12">
       <div className="text-white bg-[#242833]">
         <div className="text-center text-white text-[18px] -mb-1">
-          © <b>2025 VNSH.com</b> All Rights Reserved.
+          © <b>{new Date().getFullYear()} VNSH.com</b> All Rights Reserved.
         </div>
         <div className="-mt-[7px]">
           <FooterLinks loadInfo={loadInfo} />
@@ -136,9 +136,11 @@ const Footer: React.FC = () => {
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-0 z-50 p-4 pt-20 transition-all duration-300 ease-in-out" 
+        <div
+          className="fixed inset-0 bg-black bg-opacity-0 z-50 p-4 pt-20 transition-all duration-300 ease-in-out"
           style={{ backgroundColor: showModal ? 'rgba(0, 0, 0, 0.5)' : 'rgba(0, 0, 0, 0)' }}
-          onClick={closeModal}>
+          onClick={closeModal}
+        >
           <div
             className={`bg-white rounded-lg max-w-6xl w-full max-h-[100vh] overflow-y-auto relative mx-auto ${isAnimating ? 'modal-enter' : 'modal-exit'}`}
             onClick={e => e.stopPropagation()}
