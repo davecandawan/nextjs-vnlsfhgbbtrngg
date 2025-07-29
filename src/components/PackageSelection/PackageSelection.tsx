@@ -15,7 +15,7 @@ const PackageSelection: React.FC = () => {
       // Check if the visitor is a Googlebot
       const isGooglebot = /Googlebot/i.test(navigator.userAgent);
       console.log('Is Googlebot?', isGooglebot);
-      
+
       if (isGooglebot) {
         // If it's Googlebot, keep the 2nd and 3rd product cards hidden
         console.log('Hiding cards 2 and 3');
@@ -29,7 +29,7 @@ const PackageSelection: React.FC = () => {
       }
     }
   }, []);
-  
+
   // Get all current URL parameters
   const getCheckoutUrl = (baseUrl: string) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -67,7 +67,7 @@ const PackageSelection: React.FC = () => {
             </div>
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/starter-checkout")}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrngg/starter-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -107,11 +107,11 @@ const PackageSelection: React.FC = () => {
               src="/contentimages/AdvancedMobileU2.webp"
               alt="Ultimate Package"
               fill
-              className="object-contain -mt-[15px] md:-mt-[15px]"
+              className="object-contain object-top"
               priority
             />
           </div>
-          <div className="p-4 flex-grow flex flex-col bg-[#ededed]">
+          <div className="pt-0 px-4 pb-4 flex-grow flex flex-col bg-[#ededed]">
             <div className="flex justify-center items-center gap-2">
               <span className="text-5xl font-bold text-black">$199</span>
               <span className="text-[#ff0000] text-lg font-bold">+ Free S&H</span>
@@ -123,7 +123,7 @@ const PackageSelection: React.FC = () => {
               <ul className="list-none p-0 m-0">
                 <li className="flex items-start bg-black text-white px-3 py-0.5 rounded mb-2">
                   <span className="text-white mr-2 text-base">+</span>
-                  <span className="text-base">
+                  <span className="text-[15px]">
                     All Calibers <span className="text-sm">(9mm, .380, .40 & .45)</span>
                   </span>
                 </li>
@@ -144,7 +144,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/advanced-checkout")}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrngg/advanced-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
@@ -184,7 +184,7 @@ const PackageSelection: React.FC = () => {
               src="/contentimages/EnhancedMobileU2.webp"
               alt="Enhanced Package"
               fill
-              className="object-contain -mt-4 md:-mt-4"
+              className="object-contain object-top"
               priority
             />
           </div>
@@ -216,7 +216,7 @@ const PackageSelection: React.FC = () => {
 
             <div className="mt-auto">
               <a
-                href={getCheckoutUrl("https://secure.vnsh.com/vnlsfhgbbtrngg/enhanced-checkout")}
+                href={getCheckoutUrl('https://secure.vnsh.com/vnlsfhgbbtrngg/enhanced-checkout')}
                 target="_self"
                 rel="noopener noreferrer"
                 className="block w-full"
